@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Max Comperatore | AI Engineer & Builder</title>
-    <meta name="description" content="Max Comperatore is an AI Engineer building 1-person enterprises. Systems, automation, and unfair advantage for ambitious founders and teams." />
-    <meta name="keywords" content="AI Engineer, Artificial Intelligence, Machine Learning, Automation Systems, 1-person enterprises, Extreme Leverage, Competitive Advantage, Mendoza Argentina, AI Development, Systems Engineering" />
+    <meta name="description"
+        content="Max Comperatore is an AI Engineer building 1-person enterprises. Systems, automation, and unfair advantage for ambitious founders and teams." />
+    <meta name="keywords"
+        content="AI Engineer, Artificial Intelligence, Machine Learning, Automation Systems, 1-person enterprises, Extreme Leverage, Competitive Advantage, Mendoza Argentina, AI Development, Systems Engineering" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="author" content="Max Comperatore" />
     <meta name="language" content="English" />
@@ -26,14 +29,16 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://maxcomperatore.com/">
     <meta property="og:title" content="Max Comperatore | AI Engineer & Builder">
-    <meta property="og:description" content="AI Engineer building 1-person enterprises. Systems, automation, and unfair advantage for ambitious founders and teams.">
+    <meta property="og:description"
+        content="AI Engineer building 1-person enterprises. Systems, automation, and unfair advantage for ambitious founders and teams.">
     <meta property="og:image" content="https://maxcomperatore.com/mc.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://maxcomperatore.com/">
     <meta property="twitter:title" content="Max Comperatore | AI Engineer & Builder">
-    <meta property="twitter:description" content="AI Engineer building 1-person enterprises. Systems, automation, and unfair advantage for ambitious founders and teams.">
+    <meta property="twitter:description"
+        content="AI Engineer building 1-person enterprises. Systems, automation, and unfair advantage for ambitious founders and teams.">
     <meta property="twitter:image" content="https://maxcomperatore.com/mc.png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=IBM+Plex+Mono:wght@500&display=swap');
@@ -113,7 +118,7 @@
             color: var(--link-hover-color);
             text-decoration: underline;
         }
-        
+
         code {
             font-family: var(--font-mono);
             font-size: 0.95rem;
@@ -127,122 +132,21 @@
             border-top: 1px solid #eee;
             padding-top: 2rem;
         }
-        
-        .newsletter-cta {
-            color: #555;
-            font-size: 0.9rem;
-            margin: 0 0 1rem 0;
-        }
 
-        .subscribe-form {
-            display: flex;
-            gap: 8px;
-            max-width: 400px;
-            margin: 0 auto 1.5rem auto;
-        }
-
-        .subscribe-form input[type="email"] {
-            flex-grow: 1;
-            padding: 8px 12px;
-            font-family: var(--font-sans);
-            font-size: 0.9rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #fff;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
-            user-select: text;
-        }
-
-        .subscribe-form input[type="email"]:focus {
-            outline: none;
-            border-color: var(--link-color);
-            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
-        }
-
-        .subscribe-form button {
-            padding: 8px 16px;
-            font-family: var(--font-sans);
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: #fff;
-            background-color: var(--link-color);
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.2s ease;
-        }
-
-        .subscribe-form button:hover {
-            background-color: var(--link-hover-color);
-        }
-        
-        .subscribe-form.disabled {
-            pointer-events: none;
+        body,
+        .container,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        ul,
+        li,
+        a,
+        .footer {
             user-select: none;
-            opacity: 0.7;
-        }
-
-        .subscribe-form button:disabled {
-            background-color: #bfc5cc;
-            color: #fff;
-            cursor: not-allowed;
-        }
-        
-        .location-text {
-            font-size: 0.8rem;
-            color: #aaa;
-            margin: 0;
-        }
-
-        .toast {
-            visibility: hidden;
-            min-width: 200px;
-            background: #fff;
-            color: var(--text-color);
-            text-align: left;
-            border-radius: 8px;
-            padding: 1rem 1.5rem;
-            position: fixed;
-            right: 2.2rem;
-            bottom: 2.2rem;
-            z-index: 2000;
-            font-size: 1rem;
-            opacity: 0;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-            border: 1px solid #eee;
-            font-family: var(--font-sans);
-            transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
-            transform: translateY(20px);
-        }
-        .toast.show {
-            visibility: visible;
-            opacity: 1;
-            transform: translateY(0);
-        }
-        @media (max-width: 600px) {
-            .toast {
-                right: 1rem;
-                bottom: 1rem;
-                padding: 0.8rem 1rem;
-                font-size: 0.95rem;
-            }
-            .subscribe-form {
-                flex-direction: column;
-                gap: 0.5rem;
-                max-width: 100%;
-            }
-            .subscribe-form input[type="email"],
-            .subscribe-form button {
-                width: 100%;
-                box-sizing: border-box;
-            }
-        }
-
-        body, .container, h1, h2, h3, h4, h5, h6, p, ul, li, a, .footer, .newsletter-cta, .location-text, .toast {
-            user-select: none;
-        }
-        .subscribe-form input.no-caret {
-            caret-color: transparent !important;
         }
     </style>
 
@@ -317,153 +221,63 @@
 
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
         })(window, document, "clarity", "script", "tr3sm4gzfy");
     </script>
 </head>
+
 <body>
 
     <div class="container">
         <header>
             <h1>Max Comperatore</h1>
-            <p class="subtitle"><a href="https://ai.maxcomperatore.com/" target="_blank" style="color:inherit;text-decoration:none;">AI</a> <a href="https://drive.google.com/file/d/1Ykgv5QivUUEukxmzQhpKhO3qwas1cQNh/view?usp=sharing" target="_blank" style="color:inherit;text-decoration:none;">Engineer</a> Building 1-Person Enterprises.</p>
+            <p class="subtitle"><a href="https://ai.maxcomperatore.com/" target="_blank"
+                    style="color:inherit;text-decoration:none;">AI</a> <a href="/resume.pdf" target="_blank"
+                    style="color:inherit;text-decoration:none;">Engineer</a> Building 1-Person Enterprises.</p>
         </header>
 
         <main>
             <section id="philosophy">
                 <h2>Philosophy</h2>
                 <p>
-                    My work is centered on a single principle: <span id="highlight-leverage"><b>extreme leverage</b></span>. Most companies operate at less than 1% of their potential, constrained by <span id="cross-manual">manual processes</span> and linear thinking. I architect systems that allow a <i>single individual</i> to achieve the output of an entire team.
+                    My work is centered on a single principle: <span id="highlight-leverage"><b>extreme
+                            leverage</b></span>. Most companies operate at less than 1% of their potential, constrained
+                    by <span id="cross-manual">manual processes</span> and linear thinking. I architect systems that
+                    allow a <i>single individual</i> to achieve the output of an entire team.
                 </p>
                 <p>
-                    It's not just software; I build <span id="circle-autonomous">autonomous engines</span> by fusing language models with robust backend infrastructure, allowing me to create systems that automate the impossible, unlock the value trapped in proprietary data, and create an <span id="highlight-advantage">unfair competitive advantage</span>.
+                    It's not just software; I build <span id="circle-autonomous">autonomous engines</span> by fusing
+                    language models with robust backend infrastructure, allowing me to create systems that automate the
+                    impossible, unlock the value trapped in proprietary data, and create an <span
+                        id="highlight-advantage">unfair competitive advantage</span>.
                 </p>
             </section>
 
             <section id="connect">
                 <h2>Connect</h2>
                 <ul>
-                    <li><a href="https://www.linkedin.com/in/maxcomperatore" target="_blank">LinkedIn</a> &mdash; My professional trajectory and thoughts on the industry.</li>
-                    <li><a href="https://github.com/pyoneerC" target="_blank">GitHub</a> &mdash; The open-source code behind the systems I build.</li>
-                    <li><a href="https://t.me/maxcomperatore" target="_blank">Telegram</a> &mdash; For high-impact collaborations and ambitious projects.</li>
+                    <li><a href="/resume.pdf" target="_blank">Resume</a> &mdash; My professional narrative and technical
+                        accomplishments.</li>
+                    <li><a href="https://www.linkedin.com/in/maxcomperatore" target="_blank">LinkedIn</a> &mdash; My
+                        professional trajectory and thoughts on the industry.</li>
+                    <li><a href="https://github.com/pyoneerC" target="_blank">GitHub</a> &mdash; The open-source code
+                        behind the systems I build.</li>
+                    <li><a href="https://t.me/maxcomperatore" target="_blank">Telegram</a> &mdash; For high-impact
+                        collaborations and ambitious projects.</li>
                 </ul>
             </section>
         </main>
 
         <footer class="footer">
-            <p class="newsletter-cta" style="font-size:1rem;">Attain an inequitable edge.</p>
-            <form class="subscribe-form" onsubmit="subscribeToNewsletter(event)">
-                <input name="email" type="email" placeholder="Your email..." required>
-                <button type="submit">Subscribe</button>
-            </form>
-            <p class="location-text">Based in Mendoza, Argentina. Building for the world.</p>
         </footer>
     </div>
-    
-    <iframe name="hidden-iframe" style="display:none;"></iframe>
-    <div class="toast" id="toast">Thank you for subscribing!<br><span style="font-size:0.95em;color:#888;">Check your inbox to confirm.</span></div>
+
     <script src="https://unpkg.com/rough-notation/lib/rough-notation.iife.js"></script>
     <script>
-        function showToast(e, message, isError) {
-            if (e) e.preventDefault();
-            var toast = document.getElementById('toast');
-            if (message) {
-                toast.innerHTML = message;
-                if (isError) {
-                    toast.style.background = '#ffeaea';
-                    toast.style.color = '#b00020';
-                } else {
-                    toast.style.background = '#fff';
-                    toast.style.color = 'var(--text-color)';
-                }
-            } else {
-                toast.innerHTML = 'Thank you for subscribing!<br><span style="font-size:0.95em;color:#888;">Check your inbox to confirm.</span>';
-                toast.style.background = '#fff';
-                toast.style.color = 'var(--text-color)';
-            }
-            toast.classList.add('show');
-            setTimeout(function() {
-                toast.classList.remove('show');
-            }, 3000);
-        }
-
-        async function subscribeToNewsletter(e) {
-            e.preventDefault();
-
-            var emailInput = e.target.querySelector('input[name="email"]');
-            var button = e.target.querySelector('button[type="submit"]');
-            var email = emailInput.value.trim();
-
-            // Email validation
-            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            if (!emailRegex.test(email)) {
-                showToast(null, 'Please enter a valid email address.', true);
-                emailInput.focus();
-                return false;
-            }
-
-            // Disable form
-            emailInput.disabled = true;
-            button.disabled = true;
-            e.target.classList.add('disabled');
-
-            try {
-                // Hashnode GraphQL API call
-                const response = await fetch('https://gql.hashnode.com/', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        // Add your authentication header if needed
-                        // 'Authorization': 'Bearer YOUR_TOKEN'
-                    },
-                    body: JSON.stringify({
-                        query: `
-                            mutation SubscribeToNewsletter($input: SubscribeToNewsletterInput!) {
-                                subscribeToNewsletter(input: $input) {
-                                    status
-                                }
-                            }
-                        `,
-                        variables: {
-                            input: {
-                                publicationId: '66a821e25a0250cd4d3c86b8', // Replace with your actual publication ID
-                                email: email
-                            }
-                        }
-                    })
-                });
-
-                const data = await response.json();
-
-                if (data.errors) {
-                    throw new Error(data.errors[0].message);
-                }
-
-                // Success
-                showToast(null, 'Thank you for subscribing!<br><span style="font-size:0.95em;color:#888;">Check your inbox to confirm.</span>', false);
-
-            } catch (error) {
-                console.error('Subscription error:', error);
-                showToast(null, 'Failed to subscribe. Please try again later.', true);
-            } finally {
-                // Re-enable form
-                emailInput.disabled = false;
-                button.disabled = false;
-                e.target.classList.remove('disabled');
-            }
-
-            // Clear form
-            emailInput.value = '';
-            emailInput.blur();
-            button.blur();
-            emailInput.classList.add('no-caret');
-            document.activeElement.blur();
-            window.focus();
-        }
-        window.addEventListener('DOMContentLoaded', function() {
+        window.addEventListener('DOMContentLoaded', function () {
             if (window.RoughNotation) {
                 const leverage = document.getElementById('highlight-leverage');
                 const manual = document.getElementById('cross-manual');
@@ -482,13 +296,13 @@
                     a4 = RoughNotation.annotate(advantage, { type: 'underline', color: '#0056b3', animationDuration: 1000 });
                 }
                 a1.show();
-                setTimeout(function() {
+                setTimeout(function () {
                     if (!isMobile && a2) {
                         a2.show();
-                        setTimeout(function() {
+                        setTimeout(function () {
                             if (a3) {
                                 a3.show();
-                                setTimeout(function() {
+                                setTimeout(function () {
                                     if (a4) a4.show();
                                 }, 3200);
                             } else if (a4) {
@@ -504,4 +318,5 @@
     </script>
 
 </body>
+
 </html>
