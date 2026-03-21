@@ -51,6 +51,20 @@
             --focus-outline: 2px solid #0056b3;
             --font-sans: 'Inter', sans-serif;
             --font-mono: 'IBM Plex Mono', monospace;
+            --quote-color: #555;
+            --divider-color: #eee;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-color: #fdfdfd;
+                --background-color: #0a0a0a;
+                --link-color: #4dabf7;
+                --link-hover-color: #74c0fc;
+                --focus-outline: 2px solid #4dabf7;
+                --quote-color: #a1a1a1;
+                --divider-color: #333;
+            }
         }
 
         .skip-link {
@@ -104,7 +118,7 @@
         .subtitle {
             font-size: 1.1rem;
             margin-bottom: 2rem;
-            color: #555;
+            color: var(--quote-color);
         }
 
         h2 {
@@ -112,7 +126,7 @@
             font-weight: 700;
             margin-top: 3rem;
             margin-bottom: 1rem;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid var(--divider-color);
             padding-bottom: 0.5rem;
         }
 
@@ -310,6 +324,7 @@
     <script>
         window.addEventListener('DOMContentLoaded', function () {
             if (window.RoughNotation) {
+                const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
                 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
                 const leverage = document.getElementById('highlight-leverage');
                 const manual = document.getElementById('cross-manual');
@@ -319,16 +334,36 @@
 
                 const animationDuration = prefersReducedMotion ? 0 : 900;
 
-                const a1 = RoughNotation.annotate(leverage, { type: 'highlight', color: '#ffe066', animationDuration: animationDuration });
+                const a1 = RoughNotation.annotate(leverage, {
+                    type: 'highlight',
+                    color: isDarkMode ? 'rgba(255, 224, 102, 0.2)' : '#ffe066',
+                    animationDuration: animationDuration
+                });
                 let a2, a3, a4;
                 if (!isMobile) {
-                    a2 = RoughNotation.annotate(manual, { type: 'crossed-off', color: '#b00020', animationDuration: prefersReducedMotion ? 0 : 1300 });
-                    a3 = RoughNotation.annotate(autonomous, { type: 'circle', color: '#007bff', animationDuration: prefersReducedMotion ? 0 : 1200 });
-                    a4 = RoughNotation.annotate(advantage, { type: 'underline', color: '#0056b3', animationDuration: prefersReducedMotion ? 0 : 1000 });
+                    a2 = RoughNotation.annotate(manual, {
+                        type: 'crossed-off',
+                        color: isDarkMode ? '#ff4d4d' : '#b00020',
+                        animationDuration: prefersReducedMotion ? 0 : 1300
+                    });
+                    a3 = RoughNotation.annotate(autonomous, {
+                        type: 'circle',
+                        color: isDarkMode ? '#3bc9db' : '#007bff',
+                        animationDuration: prefersReducedMotion ? 0 : 1200
+                    });
+                    a4 = RoughNotation.annotate(advantage, {
+                        type: 'underline',
+                        color: isDarkMode ? '#748ffc' : '#0056b3',
+                        animationDuration: prefersReducedMotion ? 0 : 1000
+                    });
                 } else {
                     a2 = null;
                     a3 = null;
-                    a4 = RoughNotation.annotate(advantage, { type: 'underline', color: '#0056b3', animationDuration: prefersReducedMotion ? 0 : 1000 });
+                    a4 = RoughNotation.annotate(advantage, {
+                        type: 'underline',
+                        color: isDarkMode ? '#748ffc' : '#0056b3',
+                        animationDuration: prefersReducedMotion ? 0 : 1000
+                    });
                 }
                 a1.show();
                 setTimeout(function () {
