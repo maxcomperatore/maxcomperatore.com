@@ -46,10 +46,34 @@
         :root {
             --text-color: #1a1a1a;
             --background-color: #fdfdfd;
-            --link-color: #007bff;
-            --link-hover-color: #0056b3;
+            --link-color: #0056b3;
+            --link-hover-color: #004085;
+            --focus-outline: 2px solid #0056b3;
             --font-sans: 'Inter', sans-serif;
             --font-mono: 'IBM Plex Mono', monospace;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -10000px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        .skip-link:focus {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            width: auto;
+            height: auto;
+            background: white;
+            color: var(--link-color);
+            padding: 10px;
+            z-index: 1000;
+            border: 2px solid var(--link-color);
+            user-select: auto;
         }
 
         body {
@@ -109,14 +133,22 @@
 
         a {
             color: var(--link-color);
-            text-decoration: none;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
             font-weight: 500;
-            transition: color 0.2s ease;
+            transition: color 0.2s ease, text-decoration-thickness 0.2s ease;
         }
 
         a:hover {
             color: var(--link-hover-color);
-            text-decoration: underline;
+            text-decoration-thickness: 2px;
+        }
+
+        a:focus-visible {
+            outline: var(--focus-outline);
+            outline-offset: 4px;
+            border-radius: 2px;
         }
 
         code {
@@ -230,7 +262,7 @@
 </head>
 
 <body>
-
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="container">
         <header>
             <h1>Max Comperatore</h1>
@@ -239,7 +271,7 @@
                     style="color:inherit;text-decoration:none;">Engineer</a> Building 1-Person Enterprises.</p>
         </header>
 
-        <main>
+        <main id="main-content">
             <section id="philosophy">
                 <h2>Philosophy</h2>
                 <p>
@@ -279,21 +311,25 @@
     <script>
         window.addEventListener('DOMContentLoaded', function () {
             if (window.RoughNotation) {
+                const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
                 const leverage = document.getElementById('highlight-leverage');
                 const manual = document.getElementById('cross-manual');
                 const autonomous = document.getElementById('circle-autonomous');
                 const advantage = document.getElementById('highlight-advantage');
                 const isMobile = window.matchMedia('(max-width: 600px)').matches;
-                const a1 = RoughNotation.annotate(leverage, { type: 'highlight', color: '#ffe066', animationDuration: 900 });
+
+                const animationDuration = prefersReducedMotion ? 0 : 900;
+
+                const a1 = RoughNotation.annotate(leverage, { type: 'highlight', color: '#ffe066', animationDuration: animationDuration });
                 let a2, a3, a4;
                 if (!isMobile) {
-                    a2 = RoughNotation.annotate(manual, { type: 'crossed-off', color: '#b00020', animationDuration: 1300 });
-                    a3 = RoughNotation.annotate(autonomous, { type: 'circle', color: '#007bff', animationDuration: 1200 });
-                    a4 = RoughNotation.annotate(advantage, { type: 'underline', color: '#0056b3', animationDuration: 1000 });
+                    a2 = RoughNotation.annotate(manual, { type: 'crossed-off', color: '#b00020', animationDuration: prefersReducedMotion ? 0 : 1300 });
+                    a3 = RoughNotation.annotate(autonomous, { type: 'circle', color: '#007bff', animationDuration: prefersReducedMotion ? 0 : 1200 });
+                    a4 = RoughNotation.annotate(advantage, { type: 'underline', color: '#0056b3', animationDuration: prefersReducedMotion ? 0 : 1000 });
                 } else {
                     a2 = null;
                     a3 = null;
-                    a4 = RoughNotation.annotate(advantage, { type: 'underline', color: '#0056b3', animationDuration: 1000 });
+                    a4 = RoughNotation.annotate(advantage, { type: 'underline', color: '#0056b3', animationDuration: prefersReducedMotion ? 0 : 1000 });
                 }
                 a1.show();
                 setTimeout(function () {
