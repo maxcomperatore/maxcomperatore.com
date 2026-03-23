@@ -53,6 +53,7 @@
             --font-mono: 'IBM Plex Mono', monospace;
             --quote-color: #555;
             --divider-color: #eee;
+            --danger-red: #d32f2f;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -288,16 +289,22 @@
             <section id="philosophy">
                 <h2>Philosophy</h2>
                 <p>
-                    My work is centered on a single principle: <span id="highlight-leverage"><b>extreme
-                            leverage</b></span>. Most companies operate at less than 1% of their potential, constrained
-                    by <span id="cross-manual">manual processes</span> and linear thinking. I architect systems that
-                    allow a <i>single individual</i> to achieve the output of an entire team.
+                    Most companies <span id="cross-manual">bleed capital</span> operating at 1% of their potential,
+                    choked by manual bottlenecks and linear headcount. You don't need to hire more engineers; you
+                    need <span id="highlight-leverage"><b>extreme leverage</b></span>.
                 </p>
                 <p>
-                    It's not just software; I build <span id="circle-autonomous">autonomous engines</span> by fusing
-                    language models with robust backend infrastructure, allowing me to create systems that automate the
-                    impossible, unlock the value trapped in proprietary data, and create an <span
-                        id="highlight-advantage">unfair competitive advantage</span>.
+                    Stop <span id="circle-autonomous">burning your runway</span> on bloated operations. I architect
+                    systems that allow your business to achieve the output of an entire engineering department with
+                    a single operator.
+                </p>
+                <p>
+                    By fusing language models with ruthless backend infrastructure, I plug the leaks in your OpEx,
+                    unlock the revenue trapped in your proprietary data, and hand you an undeniable,
+                    <span id="highlight-advantage">unfair competitive advantage</span>.
+                </p>
+                <p style="font-weight: 700;">
+                    Ship faster. Scale infinitely. Burn less.
                 </p>
             </section>
 
@@ -339,49 +346,34 @@
                     color: isDarkMode ? 'rgba(255, 224, 102, 0.2)' : '#ffe066',
                     animationDuration: animationDuration
                 });
-                let a2, a3, a4;
-                if (!isMobile) {
-                    a2 = RoughNotation.annotate(manual, {
-                        type: 'crossed-off',
-                        color: isDarkMode ? '#ff4d4d' : '#b00020',
-                        animationDuration: prefersReducedMotion ? 0 : 1300
-                    });
-                    a3 = RoughNotation.annotate(autonomous, {
-                        type: 'circle',
-                        color: isDarkMode ? '#3bc9db' : '#007bff',
-                        animationDuration: prefersReducedMotion ? 0 : 1200
-                    });
-                    a4 = RoughNotation.annotate(advantage, {
-                        type: 'underline',
-                        color: isDarkMode ? '#748ffc' : '#0056b3',
-                        animationDuration: prefersReducedMotion ? 0 : 1000
-                    });
-                } else {
-                    a2 = null;
-                    a3 = null;
-                    a4 = RoughNotation.annotate(advantage, {
-                        type: 'underline',
-                        color: isDarkMode ? '#748ffc' : '#0056b3',
-                        animationDuration: prefersReducedMotion ? 0 : 1000
-                    });
-                }
+
+                const a2 = RoughNotation.annotate(manual, {
+                    type: 'crossed-off',
+                    color: isDarkMode ? '#ff4d4d' : '#b00020',
+                    animationDuration: 1300
+                });
+
+                const a3 = RoughNotation.annotate(autonomous, {
+                    type: 'circle',
+                    color: isDarkMode ? '#3bc9db' : '#007bff',
+                    animationDuration: 1200
+                });
+
+                const a4 = RoughNotation.annotate(advantage, {
+                    type: 'underline',
+                    color: isDarkMode ? '#748ffc' : '#0056b3',
+                    animationDuration: 1000
+                });
+
                 a1.show();
                 setTimeout(function () {
-                    if (!isMobile && a2) {
-                        a2.show();
+                    a2.show();
+                    setTimeout(function () {
+                        a3.show();
                         setTimeout(function () {
-                            if (a3) {
-                                a3.show();
-                                setTimeout(function () {
-                                    if (a4) a4.show();
-                                }, 3200);
-                            } else if (a4) {
-                                a4.show();
-                            }
+                            a4.show();
                         }, 3200);
-                    } else if (a4) {
-                        a4.show();
-                    }
+                    }, 3200);
                 }, 3200);
                 // Console Easter Egg
                 console.log(
