@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Sitemap: https://maxcomperatore.com/sitemap.xml
+
+# AI Crawler Rules
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Content Signals (RFC 9309 extension / Proposal)
+Content-Signal: ai-train=no, search=yes, ai-input=no

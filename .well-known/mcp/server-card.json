@@ -1,0 +1,18 @@
+{
+    "serverInfo": {
+        "name": "Max Comperatore Portfolio Agent",
+        "version": "1.0.0"
+    },
+    "transport": {
+        "type": "http",
+        "endpoint": "https://maxcomperatore.com/"
+    },
+    "capabilities": {
+        "resources": {},
+        "tools": {
+            "get_philosophy": {
+                "description": "Returns the core philosophy of Max Comperatore's AI building approach."
+            }
+        }
+    }
+}

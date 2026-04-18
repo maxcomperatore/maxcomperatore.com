@@ -1,0 +1,19 @@
+{
+    "linkset": [
+        {
+            "anchor": "https://maxcomperatore.com/",
+            "service-doc": [
+                {
+                    "href": "https://maxcomperatore.com/index.html",
+                    "type": "text/html"
+                }
+            ],
+            "status": [
+                {
+                    "href": "https://maxcomperatore.com/",
+                    "type": "text/html"
+                }
+            ]
+        }
+    ]
+}

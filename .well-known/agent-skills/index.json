@@ -1,0 +1,11 @@
+{
+    "$schema": "https://agentskills.io/schema/v0.2.0/index.json",
+    "skills": [
+        {
+            "name": "Portfolio Overview",
+            "type": "documentation",
+            "description": "Information about Max Comperatore's background, philosophy, and projects.",
+            "url": "https://maxcomperatore.com/"
+        }
+    ]
+}
