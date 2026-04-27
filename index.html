@@ -4,63 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Max Comperatore | AI Engineer & Builder</title>
-    <meta name="description"
-        content="Max Comperatore is an AI Engineer building 1-person enterprises. Systems, automation, and unfair advantage for ambitious founders and teams." />
-    <meta name="keywords"
-        content="AI Engineer, Artificial Intelligence, Machine Learning, Automation Systems, 1-person enterprises, Extreme Leverage, Competitive Advantage, Mendoza Argentina, AI Development, Systems Engineering" />
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="author" content="Max Comperatore" />
-    <meta name="language" content="English" />
-    <meta name="revisit-after" content="7 days" />
+    <title>Max Comperatore | World's First x402 Agency</title>
+    <meta name="description" content="Max Comperatore. World's First x402 Agency." />
     <meta name="theme-color" content="#007bff" />
-    <link rel="icon" type="image/png" href="mc.png">
-    <link rel="apple-touch-icon" href="mc.png">
 
-    <!-- Performance optimizations -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
-    <link rel="preconnect" href="https://gql.hashnode.com" crossorigin>
-    <link rel="modulepreload" href="https://unpkg.com/rough-notation/lib/rough-notation.iife.js">
-
-    <!-- Agent Discovery -->
-    <link rel="api-catalog" href="/.well-known/api-catalog">
-    <link rel="service-doc" href="/">
-    <link rel="mcp-server-card" href="/.well-known/mcp/server-card.json">
-    <link rel="agent-skills" href="/.well-known/agent-skills/index.json">
-    <link rel="alternate" type="text/markdown" href="/index.md">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://maxcomperatore.com/">
-    <meta property="og:title" content="Max Comperatore | AI Engineer & Builder">
-    <meta property="og:description"
-        content="AI Engineer building 1-person enterprises. Systems, automation, and unfair advantage for ambitious founders and teams.">
-    <meta property="og:image" content="https://maxcomperatore.com/mc.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://maxcomperatore.com/">
-    <meta property="twitter:title" content="Max Comperatore | AI Engineer & Builder">
-    <meta property="twitter:description"
-        content="AI Engineer building 1-person enterprises. Systems, automation, and unfair advantage for ambitious founders and teams.">
-    <meta property="twitter:image" content="https://maxcomperatore.com/mc.png">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=IBM+Plex+Mono:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@500&display=swap');
 
         :root {
             --text-color: #1a1a1a;
             --background-color: #fdfdfd;
             --link-color: #0056b3;
             --link-hover-color: #004085;
-            --focus-outline: 2px solid #0056b3;
+            --divider-color: #eee;
             --font-sans: 'Inter', sans-serif;
             --font-mono: 'IBM Plex Mono', monospace;
-            --quote-color: #555;
-            --divider-color: #eee;
-            --danger-red: #d32f2f;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -69,345 +27,374 @@
                 --background-color: #0a0a0a;
                 --link-color: #4dabf7;
                 --link-hover-color: #74c0fc;
-                --focus-outline: 2px solid #4dabf7;
-                --quote-color: #a1a1a1;
                 --divider-color: #333;
             }
-        }
-
-        .skip-link {
-            position: absolute;
-            left: -10000px;
-            top: auto;
-            width: 1px;
-            height: 1px;
-            overflow: hidden;
-        }
-
-        .skip-link:focus {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            width: auto;
-            height: auto;
-            background: white;
-            color: var(--link-color);
-            padding: 10px;
-            z-index: 1000;
-            border: 2px solid var(--link-color);
-            user-select: auto;
         }
 
         body {
             font-family: var(--font-sans);
             background-color: var(--background-color);
             color: var(--text-color);
-            line-height: 1.7;
+            line-height: 1.6;
             display: flex;
             justify-content: center;
             align-items: center;
+            /* Vertically center on large screens */
             min-height: 100vh;
             margin: 0;
-            padding: 40px 20px;
+            padding: 40px 24px;
             box-sizing: border-box;
         }
 
         .container {
-            max-width: 680px;
+            max-width: 1000px;
             width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+
+        @media (min-width: 850px) {
+            .container {
+                grid-template-columns: 1fr 1.15fr;
+                /* 2-column layout */
+                gap: 5rem;
+                align-items: start;
+            }
+        }
+
+        header {
+            margin-bottom: 2.5rem;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             margin-bottom: 0.5rem;
             font-weight: 700;
+            letter-spacing: -0.02em;
         }
 
         .subtitle {
             font-size: 1.1rem;
-            margin-bottom: 2rem;
-            color: var(--quote-color);
+            color: #777;
+            margin-bottom: 0rem;
         }
 
         h2 {
-            font-size: 1.2rem;
+            font-size: 0.95rem;
             font-weight: 700;
-            margin-top: 3rem;
-            margin-bottom: 1rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
             border-bottom: 1px solid var(--divider-color);
             padding-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #777;
         }
 
-        p {
-            font-size: 1rem;
+        .thesis-block p {
+            font-size: 1.1rem;
             margin-bottom: 1rem;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        ul li {
-            margin-bottom: 0.5rem;
+        .heart-block p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+            opacity: 0.9;
         }
 
         a {
-            color: var(--link-color);
+            color: inherit;
             text-decoration: underline;
             text-underline-offset: 3px;
-            text-decoration-thickness: 1px;
-            font-weight: 500;
-            transition: color 0.2s ease, text-decoration-thickness 0.2s ease;
+            transition: color 0.2s ease;
         }
 
         a:hover {
-            color: var(--link-hover-color);
-            text-decoration-thickness: 2px;
+            color: var(--link-color);
         }
 
-        a:focus-visible {
-            outline: var(--focus-outline);
-            outline-offset: 4px;
-            border-radius: 2px;
+        .footer {
+            margin-top: 4rem;
+            font-size: 0.8rem;
+            opacity: 0.5;
+            text-align: left;
         }
 
-        code {
-            font-family: var(--font-mono);
-            font-size: 0.95rem;
+        /* Paywall Widget Replica */
+        .paywall-widget {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            max-width: 100%;
+            margin: 2rem 0;
+            color: #111;
+            font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+            text-align: center;
+        }
+
+        .paywall-widget h3 {
+            margin: 0 0 12px 0;
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0;
+            text-transform: none;
+            border: none;
+            padding: 0;
+        }
+
+        .paywall-widget p.pw-desc {
+            font-size: 0.9rem;
+            color: #333;
+            line-height: 1.5;
+            margin: 0 0 20px 0;
+        }
+
+        .paywall-pill {
+            display: inline-flex;
+            align-items: center;
+            background: #fdfdfd;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            padding: 4px 16px 4px 6px;
+            font-family: ui-monospace, "IBM Plex Mono", monospace;
+            font-size: 0.8rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .paywall-icon {
+            background: #333;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+        }
+
+        .paywall-icon svg {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+        }
+
+        .paywall-details {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 16px;
+            font-size: 0.85rem;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .paywall-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .paywall-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .paywall-row span:first-child {
+            color: #555;
+        }
+
+        .paywall-row span:last-child {
+            color: #111;
             font-weight: 500;
         }
 
-        .footer {
-            margin-top: 3rem;
+        .paywall-btn {
+            background: #2563eb;
+            color: white;
+            border: none;
             width: 100%;
-            text-align: center;
-            padding-top: 2rem;
+            height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            box-sizing: border-box;
         }
 
-        body,
-        .container,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p,
-        ul,
-        li,
-        a,
-        .footer {
-            user-select: none;
+        @media (prefers-color-scheme: dark) {
+            .paywall-widget {
+                background: #111;
+                border-color: #222;
+                box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+                color: #fff;
+            }
+
+            .paywall-widget p.pw-desc {
+                color: #aaa;
+            }
+
+            .paywall-pill {
+                background: #1a1a1a;
+                border-color: #333;
+                color: #eee;
+            }
+
+            .paywall-icon {
+                background: #555;
+            }
+
+            .paywall-details {
+                background: #1a1a1a;
+            }
+
+            .paywall-row span:first-child {
+                color: #aaa;
+            }
+
+            .paywall-row span:last-child {
+                color: #fff;
+            }
+
+            .paywall-btn {
+                background: #3b82f6;
+            }
+        }
+
+        .cta-section {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            border-top: 1px dashed var(--divider-color);
+            padding-top: 2rem;
+            margin-top: 2rem;
         }
     </style>
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://maxcomperatore.com/">
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "Person",
-                "name": "Max Comperatore",
-                "jobTitle": "AI Engineer",
-                "description": "AI Engineer building 1-person enterprises. Systems, automation, and unfair advantage for ambitious founders and teams.",
-                "url": "https://maxcomperatore.com",
-                "sameAs": [
-                    "https://www.linkedin.com/in/maxcomperatore",
-                    "https://github.com/pyoneerC",
-                    "https://ai.maxcomperatore.com"
-                ],
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Mendoza",
-                    "addressCountry": "Argentina"
-                },
-                "knowsAbout": [
-                    "Artificial Intelligence",
-                    "Machine Learning",
-                    "Automation",
-                    "Systems Engineering",
-                    "Entrepreneurship"
-                ]
-            },
-            {
-                "@type": "WebSite",
-                "name": "Max Comperatore - AI Engineer & Builder",
-                "url": "https://maxcomperatore.com",
-                "description": "AI Engineer building 1-person enterprises with extreme leverage and unfair competitive advantage.",
-                "author": {
-                    "@type": "Person",
-                    "name": "Max Comperatore"
-                },
-                "publisher": {
-                    "@type": "Person",
-                    "name": "Max Comperatore"
-                }
-            },
-            {
-                "@type": "Organization",
-                "name": "Max Comperatore AI Engineering",
-                "url": "https://maxcomperatore.com",
-                "description": "Specializing in AI-powered automation systems for 1-person enterprises.",
-                "founder": {
-                    "@type": "Person",
-                    "name": "Max Comperatore"
-                },
-                "location": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Mendoza",
-                    "addressCountry": "Argentina"
-                },
-                "sameAs": [
-                    "https://www.linkedin.com/in/maxcomperatore",
-                    "https://github.com/pyoneerC"
-                ]
-            }
-        ]
-    }
-    </script>
-
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-        (function (c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script", "tr3sm4gzfy");
-    </script>
 </head>
 
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="container">
-        <header>
-            <h1>Max Comperatore</h1>
-            <p class="subtitle"><a href="https://ai.maxcomperatore.com/" target="_blank"
-                    style="color:inherit;text-decoration:none;">AI</a> <a href="/resume.pdf" target="_blank"
-                    style="color:inherit;text-decoration:none;">Engineer</a> Building 1-Person Enterprises.</p>
-        </header>
+        <!-- Left Column: Identity + Thesis + CTA -->
+        <div class="col">
+            <header>
+                <h1>Max Comperatore</h1>
+                <p class="subtitle">World's First x402 Agency.</p>
+            </header>
 
-        <main id="main-content">
-            <section id="philosophy">
-                <h2>Philosophy</h2>
-                <p>
-                    Most companies <span id="cross-manual">bleed capital</span> operating at 1% of their potential,
-                    choked by manual bottlenecks and linear headcount. You don't need to hire more engineers; you
-                    need <span id="highlight-leverage"><b>extreme leverage</b></span>.
-                </p>
-                <p>
-                    Stop <span id="circle-autonomous">burning your runway</span> on bloated operations. I architect
-                    systems that allow your business to achieve the output of an entire engineering department with
-                    a single operator.
-                </p>
-                <p>
-                    By fusing language models with ruthless backend infrastructure, I plug the leaks in your OpEx,
-                    unlock the revenue trapped in your proprietary data, and hand you an undeniable,
-                    <span id="highlight-advantage">unfair competitive advantage</span>.
-                </p>
-                <p style="font-weight: 700;">
-                    Ship faster. Scale infinitely. Burn less.
-                </p>
+            <section class="thesis-block">
+                <p>Legacy finance is a tax. Platforms take 5-15% just for playing gatekeeper.</p>
+                <p>I build the infrastructure that deletes the middleman. <strong>0% transaction fees.</strong></p>
+                <p><strong>x402 standard.</strong> API keys are dead. Replacing rate limits with transparent,
+                    sub-second transactions. Scale instantly from fractions of a cent to uncapped big-ticket
+                    settlements.</p>
             </section>
 
-            <section id="connect">
-                <h2>Connect</h2>
-                <ul>
-                    <li><a href="/resume.pdf" target="_blank">Resume</a> &mdash; My professional narrative and technical
-                        accomplishments.</li>
-                    <li><a href="https://www.linkedin.com/in/maxcomperatore" target="_blank">LinkedIn</a> &mdash; My
-                        strategic trajectory and thoughts on the industry.</li>
-                    <li><a href="https://github.com/pyoneerC" target="_blank">GitHub</a> &mdash; The open-source code
-                        behind the systems I build.</li>
-                    <li><a href="mailto:me@maxcomperatore.com">Email</a> &mdash; Reach out at me [at] maxcomperatore
-                        [dot] com.</li>
-                </ul>
+            <section class="cta-section">
+                <p style="margin-bottom: 1rem;">
+                    Stop bleeding revenue to legacy tollbooths. Elite creators are abandoning the old system for
+                    absolute financial sovereignty, and I build the pipelines that make it happen.
+                </p>
+                <p style="margin-bottom: 2rem;">
+                    I will build and integrate a custom, internet-native paywall directly into your highest-value work.
+                    <strong>Zero blockchain complexity on your end.</strong> Just instant settlement.
+                </p>
+                <div style="font-family: var(--font-mono); font-size: 0.95rem; line-height: 2;">
+                    <div><a href="https://meet.maxcomperatore.com" target="_blank"
+                            style="font-weight: 600; font-size: 1.1rem; color: var(--link-color);">Book a Call</a></div>
+                    <div style="opacity: 0.6;"><a href="mailto:me@maxcomperatore.com">Email</a></div>
+                    <div style="opacity: 0.6;"><a href="https://www.linkedin.com/in/maxcomperatore"
+                            target="_blank">LinkedIn</a></div>
+                </div>
             </section>
-        </main>
+        </div>
 
-        <footer class="footer">
-        </footer>
+        <!-- Right Column: x402 Ecosystem & Widget -->
+        <div class="col">
+            <section id="heart">
+                <h2>Internet-Native Payments</h2>
+                <div class="heart-block">
+                    <p>
+                        Finally, money that works like the internet. No more Stripe holding your funds hostage. No
+                        rolling reserves, borders, or chargeback fraud. And absolutely no waiting 3-5 "business days"
+                        for your own cash.
+                    </p>
+                    <p>
+                        Drop this paywall in front of any digital route: PDFs, priority forms, APIs, or donation links.
+                        I build the custom infrastructure so you can charge per-action instantly.
+                    </p>
+
+                    <div class="paywall-widget" aria-hidden="true">
+                        <h3>Payment Required</h3>
+                        <p class="pw-desc">Unlock access to <strong>[ Your API / Content / Anything ]</strong>. To
+                            proceed, please pay $5.00 Base USDC.</p>
+
+                        <div class="paywall-pill">
+                            <div class="paywall-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                </svg>
+                            </div>
+                            0xfC3F...caBf
+                        </div>
+
+                        <div class="paywall-details">
+                            <div class="paywall-row"><span>Wallet:</span><span>0xfC3F...caBf</span></div>
+                            <div class="paywall-row"><span>Available balance:</span><span>••••• USDC</span></div>
+                            <div class="paywall-row"><span>Amount:</span><span>$5.00 USDC</span></div>
+                            <div class="paywall-row"><span>Network:</span><span>Base</span></div>
+                        </div>
+
+                        <button class="paywall-btn">Pay now</button>
+                    </div>
+
+                    <p>
+                        Built fiercely for <strong>content creators</strong> who deserve to keep 100% of their leverage.
+                        And with machine-to-machine settlement, <u style="text-underline-offset: 3px;">AI agents can pay
+                            you</u> directly in USDC.
+                    </p>
+                </div>
+            </section>
+        </div>
     </div>
 
-    <script src="https://unpkg.com/rough-notation/lib/rough-notation.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <script>
         window.addEventListener('DOMContentLoaded', function () {
-            if (window.RoughNotation) {
-                const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-                const leverage = document.getElementById('highlight-leverage');
-                const manual = document.getElementById('cross-manual');
-                const autonomous = document.getElementById('circle-autonomous');
-                const advantage = document.getElementById('highlight-advantage');
-                const isMobile = window.matchMedia('(max-width: 600px)').matches;
 
-                const animationDuration = prefersReducedMotion ? 0 : 900;
+            const payBtn = document.querySelector('.paywall-btn');
+            if (payBtn && window.confetti) {
+                payBtn.addEventListener('click', function () {
+                    const rect = payBtn.getBoundingClientRect();
+                    const x = (rect.left + rect.width / 2) / window.innerWidth;
+                    const y = (rect.top + rect.height / 2) / window.innerHeight;
 
-                const a1 = RoughNotation.annotate(leverage, {
-                    type: 'highlight',
-                    color: isDarkMode ? 'rgba(255, 224, 102, 0.2)' : '#ffe066',
-                    animationDuration: animationDuration
+                    confetti({
+                        particleCount: 75,
+                        spread: 70,
+                        origin: { x: x, y: y },
+                        colors: ['#2563eb', '#3b82f6', '#60a5fa', '#ffffff'],
+                        disableForReducedMotion: true
+                    });
+
+                    const originalText = payBtn.innerText;
+                    payBtn.innerText = 'Paid ✓';
+                    payBtn.style.background = '#10b981';
+
+                    setTimeout(() => {
+                        payBtn.innerText = originalText;
+                        payBtn.style.background = '';
+                    }, 2000);
                 });
-
-                const a2 = RoughNotation.annotate(manual, {
-                    type: 'crossed-off',
-                    color: isDarkMode ? '#ff4d4d' : '#b00020',
-                    animationDuration: 1300
-                });
-
-                const a3 = RoughNotation.annotate(autonomous, {
-                    type: 'circle',
-                    color: isDarkMode ? '#3bc9db' : '#007bff',
-                    animationDuration: 1200
-                });
-
-                const a4 = RoughNotation.annotate(advantage, {
-                    type: 'underline',
-                    color: isDarkMode ? '#748ffc' : '#0056b3',
-                    animationDuration: 1000
-                });
-
-                a1.show();
-                setTimeout(function () {
-                    a2.show();
-                    setTimeout(function () {
-                        a3.show();
-                        setTimeout(function () {
-                            a4.show();
-                        }, 3200);
-                    }, 3200);
-                }, 3200);
-                // Console Easter Egg
-                console.log(
-                    "%c MAX COMPERATORE %c system: extreme leverage mode active\n%cLooking for an AI-native engineer? let's talk.\n%cschedule ➔ meet.maxcomperatore.com",
-                    "background: #1a1a1a; color: #fff; padding: 5px 10px; font-weight: bold; border-radius: 4px;",
-                    "color: #007bff; font-weight: bold;",
-                    "color: #555; line-height: 2;",
-                    "color: #007bff; font-weight: bold; font-size: 1.1em;"
-                );
-                console.log(`%c
-     ______  _______          ____                   
-    |      \\/       \\    ____|\\   \\  _____      _____
-   /          /\\     \\  /    /\\    \\ \\    \\    /    /
-  /     /\\   / /\\     ||    |  |    | \\    \\  /    / 
- /     /\\ \\_/ / /    /||    |__|    |  \\____\\/____/  
-|     |  \\|_|/ /    / ||    .--.    |  /    /\\    \\  
-|     |       |    |  ||    |  |    | /    /  \\    \\ 
-|\\____\\       |____|  /|____|  |____|/____/ /\\ \\____\\
-| |    |      |    | / |    |  |    ||    |/  \\|    |
- \\|____|      |____|/  |____|  |____||____|    |____|
-    \\(          )/       \\(      )/    \\(        )/  
-     '          '         '      '      '        '   
-                                  `, "color: #007bff; font-weight: bold;");
             }
         });
     </script>
-
 </body>
 
 </html>
