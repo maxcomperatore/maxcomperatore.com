@@ -123,6 +123,10 @@
             text-align: left;
         }
 
+        .paywall-container {
+            margin: 2rem 0;
+        }
+
         /* Paywall Widget Replica */
         .paywall-widget {
             background: #ffffff;
@@ -131,7 +135,7 @@
             box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
             border: 1px solid rgba(0, 0, 0, 0.05);
             max-width: 100%;
-            margin: 2rem 0;
+            margin: 0;
             color: #111;
             font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
             text-align: center;
@@ -230,6 +234,303 @@
             box-sizing: border-box;
         }
 
+        .paywall-unlocked {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            max-width: 100%;
+            color: #111;
+            font-family: var(--font-sans);
+            text-align: left;
+            display: none;
+            animation: fadeIn 0.4s ease-out;
+            margin: 0;
+        }
+
+        .pu-success-header {
+            color: #10b981;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .pu-title {
+            margin: 0 0 8px 0;
+            color: #111;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .pu-subtitle {
+            color: #777;
+            font-size: 0.95rem;
+            margin: 0 0 24px 0;
+        }
+
+        .pu-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #666;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .pu-hash-box {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 16px;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: #2563eb;
+            word-break: break-all;
+            margin-bottom: 24px;
+        }
+
+        .pu-json-box {
+            background: #1c2128;
+            border-radius: 8px;
+            padding: 16px;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: #c9d1d9;
+            line-height: 1.5;
+            margin-bottom: 32px;
+            overflow-x: auto;
+            border: 1px solid #1c2128;
+        }
+
+        .pu-json-box pre {
+            margin: 0;
+        }
+
+        .pu-btn-row {
+            display: flex;
+            gap: 12px;
+        }
+
+        .pu-btn {
+            flex: 1;
+            text-align: center;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        .pu-btn-dark {
+            background: #1c2128;
+            color: #fff;
+            border: 1px solid #1c2128;
+        }
+
+        .pu-btn-dark:hover {
+            background: #2d333b;
+            border-color: #2d333b;
+            color: #fff;
+        }
+
+        .pu-btn-light {
+            background: #fff;
+            color: #111;
+            border: 1px solid #d0d7de;
+        }
+
+        .pu-btn-light:hover {
+            background: #f3f4f6;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes spinner {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spinner 0.8s linear infinite;
+        }
+
+        .paywall-status {
+            font-size: 0.85rem;
+            color: #555;
+            margin: 14px 0 0 0;
+            text-align: center;
+            display: none;
+        }
+
+        /* MetaMask Mock Popup */
+        .mm-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+            backdrop-filter: blur(2px);
+            animation: fadeIn 0.2s ease-out;
+        }
+
+        .mm-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 340px;
+            background: #242526;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            z-index: 1000;
+            display: none;
+            animation: mmSlideIn 0.2s ease-out;
+        }
+
+        @keyframes mmSlideIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -45%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .mm-header {
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #3a3b3c;
+        }
+
+        .mm-account-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+        }
+
+        .mm-avatar {
+            width: 26px;
+            height: 26px;
+            background: radial-gradient(circle at top left, #f6851b, #e27625, #9c4c1e);
+            border-radius: 4px;
+        }
+
+        .mm-account-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+            line-height: 1.2;
+        }
+
+        .mm-wallet-text {
+            font-size: 0.8rem;
+            color: #b0b3b8;
+        }
+
+        .mm-body {
+            padding: 24px 16px;
+        }
+
+        .mm-title {
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0 0 8px 0;
+        }
+
+        .mm-subtitle {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #b0b3b8;
+            margin: 0 0 24px 0;
+        }
+
+        .mm-box {
+            background: #18191a;
+            border: 1px solid #3a3b3c;
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 16px;
+        }
+
+        .mm-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #b0b3b8;
+            margin-bottom: 10px;
+        }
+
+        .mm-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .mm-footer {
+            display: flex;
+            gap: 12px;
+            padding: 16px;
+            border-top: 1px solid #3a3b3c;
+        }
+
+        .mm-btn {
+            flex: 1;
+            padding: 10px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            border: none;
+            transition: filter 0.2s;
+        }
+
+        .mm-btn:hover {
+            filter: brightness(1.1);
+        }
+
+        .mm-cancel {
+            background: #3a3b3c;
+            color: #fff;
+        }
+
+        .mm-confirm {
+            background: #ffffff;
+            color: #000;
+        }
+
         @media (prefers-color-scheme: dark) {
             .paywall-widget {
                 background: #111;
@@ -266,6 +567,57 @@
 
             .paywall-btn {
                 background: #3b82f6;
+            }
+
+            .paywall-unlocked {
+                background: #111;
+                border-color: #222;
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            }
+
+            .pu-title {
+                color: #fff;
+            }
+
+            .pu-label {
+                color: #aaa;
+            }
+
+            .pu-hash-box {
+                background: #1a1a1a;
+                border-color: #333;
+                color: #60a5fa;
+            }
+
+            .pu-json-box {
+                background: #0d1117;
+                border-color: #30363d;
+            }
+
+            .pu-btn-dark {
+                background: #fff;
+                color: #111;
+                border-color: #fff;
+            }
+
+            .pu-btn-dark:hover {
+                background: #e5e7eb;
+                border-color: #e5e7eb;
+                color: #111;
+            }
+
+            .pu-btn-light {
+                background: #111;
+                color: #fff;
+                border-color: #444;
+            }
+
+            .pu-btn-light:hover {
+                background: #222;
+            }
+
+            .paywall-status {
+                color: #999;
             }
         }
 
@@ -326,33 +678,76 @@
                         for your own cash.
                     </p>
                     <p>
-                        Drop this paywall in front of any digital route: PDFs, priority forms, APIs, or donation links.
+                        Drop this paywall in front of any digital route: PDFs, priority forms, courses, or donation
+                        links.
                         I build the custom infrastructure so you can charge per-action instantly.
                     </p>
 
-                    <div class="paywall-widget" aria-hidden="true">
-                        <h3>Payment Required</h3>
-                        <p class="pw-desc">Unlock access to <strong>[ Your API / Content / Anything ]</strong>. To
-                            proceed, please pay $5.00 Base USDC.</p>
+                    <div class="paywall-container">
+                        <div class="paywall-widget" id="pw-widget" aria-hidden="true">
+                            <h3>Payment Required</h3>
+                            <p class="pw-desc">Unlock access to <strong>[ Your API / Content / Anything ]</strong>. To
+                                proceed, please pay $5.00 Base USDC.</p>
 
-                        <div class="paywall-pill">
-                            <div class="paywall-icon">
-                                <svg viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                                </svg>
+                            <div class="paywall-pill">
+                                <div class="paywall-icon">
+                                    <svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                    </svg>
+                                </div>
+                                0xfC3F...caBf
                             </div>
-                            0xfC3F...caBf
+
+                            <div class="paywall-details">
+                                <div class="paywall-row"><span>Wallet:</span><span>0xfC3F...caBf</span></div>
+                                <div class="paywall-row"><span>Available balance:</span><span>••••• USDC</span></div>
+                                <div class="paywall-row"><span>Amount:</span><span>$5.00 USDC</span></div>
+                                <div class="paywall-row"><span>Network:</span><span>Base</span></div>
+                            </div>
+
+                            <button class="paywall-btn">Pay now</button>
+                            <p class="paywall-status"></p>
                         </div>
 
-                        <div class="paywall-details">
-                            <div class="paywall-row"><span>Wallet:</span><span>0xfC3F...caBf</span></div>
-                            <div class="paywall-row"><span>Available balance:</span><span>••••• USDC</span></div>
-                            <div class="paywall-row"><span>Amount:</span><span>$5.00 USDC</span></div>
-                            <div class="paywall-row"><span>Network:</span><span>Base</span></div>
-                        </div>
+                        <div class="paywall-unlocked" id="pw-unlocked">
+                            <div style="display: flex; align-items: flex-start; gap: 16px;">
+                                <div
+                                    style="background: #10b981; border-radius: 50%; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white"
+                                        stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="pu-success-header">Demo Payment Successful</div>
+                                    <h3 class="pu-title">Thank you for your payment</h3>
+                                    <p class="pu-subtitle" style="line-height: 1.5;">This is what your customers see
+                                        after paying.</p>
+                                </div>
+                            </div>
 
-                        <button class="paywall-btn">Pay now</button>
+                            <div class="pu-label" style="margin-top: 12px;">Network: Base</div>
+                            <div class="pu-label" style="margin-bottom: 8px;">Network Identifier: Base-Mainnet</div>
+                            <div class="pu-hash-box">
+                                0x0996285904af68eaff17fd2fda110bce33944c96fc13766ecaff0ac1af2f4c01
+                            </div>
+
+                            <div class="pu-label" style="margin-bottom: 8px;">Payment Response Header</div>
+                            <div class="pu-json-box">
+                                <pre>{
+  "transaction": "0x0996...2f4c01",
+  "network": "base-mainnet",
+  "payer": "0xfc3f...cabf"
+}</pre>
+                            </div>
+
+                            <div class="pu-btn-row">
+                                <button class="reset-btn pu-btn pu-btn-dark">&larr; Reset Demo</button>
+                                <a href="https://meet.maxcomperatore.com" target="_blank"
+                                    class="pu-btn pu-btn-light">Book a Call &rarr;</a>
+                            </div>
+                        </div>
                     </div>
 
                     <p>
@@ -365,33 +760,131 @@
         </div>
     </div>
 
+    <!-- MetaMask Simulation -->
+    <div class="mm-overlay" id="mm-overlay"></div>
+    <div class="mm-popup" id="mm-popup">
+        <div class="mm-header">
+            <div class="mm-account-info">
+                <div class="mm-avatar"></div>
+                <div>
+                    <div class="mm-account-name">Demo Account</div>
+                    <div class="mm-wallet-text">Live Simulation</div>
+                </div>
+            </div>
+            <div
+                style="color: #b0b3b8; border: 1px solid #b0b3b8; border-radius: 50%; width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: bold; cursor: pointer;">
+                i</div>
+        </div>
+
+        <div class="mm-body">
+            <h3 class="mm-title">Signature request <span
+                    style="background: #0052ff; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.6em; vertical-align: middle; margin-left: 4px;">DEMO</span>
+            </h3>
+            <p class="mm-subtitle">Review request details before you confirm.</p>
+
+            <div class="mm-box">
+                <div class="mm-row"><span>Network</span><span
+                        style="color: #fff; display: flex; align-items: center; gap: 4px;"><span
+                            style="background: #0052ff; color:#fff; border-radius:50%; width:16px; height:16px; display:inline-flex; align-items:center; justify-content:center; font-size:0.65rem; font-weight:bold;">B</span>
+                        Base Mainnet</span></div>
+                <div class="mm-row"><span>Request from</span><span style="color: #fff;">maxcomperatore.com</span></div>
+                <div class="mm-row"><span>Interacting with</span><span style="color: #fff;">0x036Cb...dCF7e</span></div>
+            </div>
+
+            <div class="mm-box">
+                <div style="font-size: 0.85rem; color: #fff; margin-bottom: 12px; font-weight: 500;">Message</div>
+                <div class="mm-row"><span>Primary type:</span><span
+                        style="color: #fff; font-family: monospace;">TransferWithAuth</span></div>
+                <div class="mm-row"><span>From:</span><span style="color: #fff;">Account 1</span></div>
+                <div class="mm-row"><span>Value:</span><span style="color: #fff;">5000000</span></div>
+            </div>
+        </div>
+
+        <div class="mm-footer">
+            <button class="mm-btn mm-cancel" id="mm-cancel-btn">Cancel</button>
+            <button class="mm-btn mm-confirm" id="mm-confirm-btn">Confirm</button>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <script>
         window.addEventListener('DOMContentLoaded', function () {
 
             const payBtn = document.querySelector('.paywall-btn');
+            const statusText = document.querySelector('.paywall-status');
+            const mmOverlay = document.getElementById('mm-overlay');
+            const mmPopup = document.getElementById('mm-popup');
+            const mmCancelBtn = document.getElementById('mm-cancel-btn');
+            const mmConfirmBtn = document.getElementById('mm-confirm-btn');
+
             if (payBtn && window.confetti) {
                 payBtn.addEventListener('click', function () {
-                    const rect = payBtn.getBoundingClientRect();
-                    const x = (rect.left + rect.width / 2) / window.innerWidth;
-                    const y = (rect.top + rect.height / 2) / window.innerHeight;
-
-                    confetti({
-                        particleCount: 75,
-                        spread: 70,
-                        origin: { x: x, y: y },
-                        colors: ['#2563eb', '#3b82f6', '#60a5fa', '#ffffff'],
-                        disableForReducedMotion: true
-                    });
-
-                    const originalText = payBtn.innerText;
-                    payBtn.innerText = 'Paid ✓';
-                    payBtn.style.background = '#10b981';
+                    payBtn.innerHTML = '<span class="spinner"></span>';
+                    payBtn.style.pointerEvents = 'none';
+                    statusText.style.display = 'block';
+                    statusText.innerText = 'Creating payment signature...';
 
                     setTimeout(() => {
-                        payBtn.innerText = originalText;
-                        payBtn.style.background = '';
-                    }, 2000);
+                        mmOverlay.style.display = 'block';
+                        mmPopup.style.display = 'block';
+                    }, 500);
+                });
+
+                mmCancelBtn.addEventListener('click', function () {
+                    mmOverlay.style.display = 'none';
+                    mmPopup.style.display = 'none';
+                    payBtn.innerHTML = 'Pay now';
+                    payBtn.style.pointerEvents = 'auto';
+                    statusText.style.display = 'none';
+                });
+
+                mmConfirmBtn.addEventListener('click', function () {
+                    mmOverlay.style.display = 'none';
+                    mmPopup.style.display = 'none';
+                    statusText.innerText = 'Requesting content with payment...';
+
+                    setTimeout(() => {
+                        statusText.style.display = 'none';
+                        payBtn.innerText = 'Paid ✓';
+                        payBtn.style.background = '#10b981';
+
+                        const rect = payBtn.getBoundingClientRect();
+                        const x = (rect.left + rect.width / 2) / window.innerWidth;
+                        const y = (rect.top + rect.height / 2) / window.innerHeight;
+
+                        confetti({
+                            particleCount: 75,
+                            spread: 70,
+                            origin: { x: x, y: y },
+                            colors: ['#2563eb', '#3b82f6', '#60a5fa', '#ffffff'],
+                            disableForReducedMotion: true
+                        });
+
+                        const widget = document.getElementById('pw-widget');
+                        const unlocked = document.getElementById('pw-unlocked');
+
+                        setTimeout(() => {
+                            widget.style.display = 'none';
+                            unlocked.style.display = 'block';
+                        }, 800);
+
+                    }, 1500);
+                });
+            }
+
+            const resetBtn = document.querySelector('.reset-btn');
+            if (resetBtn) {
+                resetBtn.addEventListener('click', function () {
+                    const widget = document.getElementById('pw-widget');
+                    const unlocked = document.getElementById('pw-unlocked');
+
+                    unlocked.style.display = 'none';
+                    widget.style.display = 'block';
+
+                    payBtn.innerText = 'Pay now';
+                    payBtn.style.background = '';
+                    payBtn.style.pointerEvents = 'auto';
+                    statusText.style.display = 'none';
                 });
             }
         });
