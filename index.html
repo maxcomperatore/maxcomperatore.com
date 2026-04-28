@@ -642,6 +642,57 @@
             padding-top: 2rem;
             margin-top: 2rem;
         }
+
+        .tooltip {
+            position: relative;
+            cursor: help;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .tooltip::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            opacity: 0;
+            visibility: hidden;
+            background: var(--text-color);
+            color: var(--background-color);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            pointer-events: none;
+            z-index: 100;
+            font-family: var(--font-sans);
+            font-weight: 500;
+        }
+        
+        .tooltip::before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            opacity: 0;
+            visibility: hidden;
+            border: 6px solid transparent;
+            border-top-color: var(--text-color);
+            transition: all 0.2s ease;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .tooltip:hover::after,
+        .tooltip:hover::before {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
     </style>
 </head>
 
@@ -768,7 +819,7 @@
 
                     <p>
                         Built fiercely for <strong>creators</strong> who deserve 100% of their leverage.
-                        Better yet, the protocol is machine-readable, meaning <u style="text-underline-offset: 3px;">AI agents can also pay you</u> directly in USDC.
+                        Better yet, the protocol is machine-readable, meaning <span class="tooltip" data-tooltip="AI agent market projected to hit $182B+ by 2033. — World Economic Forum">AI agents can also pay you</span> directly in USDC.
                     </p>
                 </div>
             </section>
