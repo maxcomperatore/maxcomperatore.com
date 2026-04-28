@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Max Comperatore | World's First x402 Agency</title>
-    <meta name="description" content="Legacy payment systems are a slow bleed. I build the infrastructure that deletes the middleman. 0% fees. Instant stablecoin settlement natively over HTTP." />
+    <meta name="description"
+        content="Legacy payment systems are a slow bleed. I build the infrastructure that deletes the middleman. 0% fees. Instant stablecoin settlement natively over HTTP." />
     <meta name="theme-color" content="#000000" />
     <link rel="icon" href="mc.png" />
 
@@ -13,14 +14,16 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://maxcomperatore.com/" />
     <meta property="og:title" content="Max Comperatore | World's First x402 Agency" />
-    <meta property="og:description" content="Legacy payment systems are a slow bleed. I build the infrastructure that deletes the middleman. 0% fees. Instant stablecoin settlement natively over HTTP." />
+    <meta property="og:description"
+        content="Legacy payment systems are a slow bleed. I build the infrastructure that deletes the middleman. 0% fees. Instant stablecoin settlement natively over HTTP." />
     <meta property="og:image" content="https://maxcomperatore.com/mc.png" />
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:url" content="https://maxcomperatore.com/" />
     <meta name="twitter:title" content="Max Comperatore | World's First x402 Agency" />
-    <meta name="twitter:description" content="Legacy payment systems are a slow bleed. I build the infrastructure that deletes the middleman. 0% fees. Instant stablecoin settlement natively over HTTP." />
+    <meta name="twitter:description"
+        content="Legacy payment systems are a slow bleed. I build the infrastructure that deletes the middleman. 0% fees. Instant stablecoin settlement natively over HTTP." />
     <meta name="twitter:image" content="https://maxcomperatore.com/mc.png" />
 
     <style>
@@ -665,13 +668,13 @@
             font-size: 0.8rem;
             white-space: nowrap;
             transition: all 0.2s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             pointer-events: none;
             z-index: 100;
             font-family: var(--font-sans);
             font-weight: 500;
         }
-        
+
         .tooltip::before {
             content: '';
             position: absolute;
@@ -714,10 +717,27 @@
             </section>
 
             <section class="cta-section">
-                <p style="margin-bottom: 1rem;">
-                    Stop bleeding revenue to legacy tollbooths. Elite creators are abandoning the old system for
-                    absolute financial sovereignty.
-                </p>
+                <div
+                    style="margin-bottom: 1rem; background: var(--background-color); border: 1px solid var(--divider-color); padding: 12px 16px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                        <span
+                            style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-color);">Extra
+                            Take-Home</span>
+                        <span style="font-size: 0.75rem; color: #777;">vs. Buy Me a Coffee (5% + Stripe)</span>
+                    </div>
+                    <div style="display: flex; gap: 8px; align-items: center;">
+                        <span style="font-family: var(--font-mono); font-weight: 600; color: #777;">$</span>
+                        <input type="number" min="0" value="1000"
+                            style="width: 80px; background: transparent; border: none; border-bottom: 1px dashed var(--divider-color); color: var(--text-color); font-family: var(--font-mono); padding: 2px 0; outline: none; font-size: 1rem;"
+                            oninput="document.getElementById('roi-save').innerText = Intl.NumberFormat('en-US').format(Math.max(0, Math.floor((this.value * 0.079 + (this.value/10)*0.3) * 12)))">
+                        <span style="font-size: 0.8rem; color: #777; font-family: var(--font-mono);">/mo</span>
+                        <span
+                            style="margin-left: auto; font-family: var(--font-mono); font-weight: 700; color: #10b981; font-size: 1.1rem;">+
+                            $<span id="roi-save">1,308</span><span
+                                style="font-size: 0.8rem; font-weight: 600;">/yr</span></span>
+                    </div>
+                </div>
                 <p style="margin-bottom: 2rem;">
                     I will build and integrate a custom, internet-native paywall directly into your highest-value work.
                     <strong>Zero blockchain complexity on your end.</strong> Just instant stablecoin settlement natively
@@ -725,7 +745,8 @@
                 </p>
                 <div style="font-family: var(--font-mono); font-size: 0.95rem; line-height: 2;">
                     <div style="margin-bottom: 4px;"><a href="https://meet.maxcomperatore.com" target="_blank"
-                            style="font-weight: 700; font-size: 1.35rem; color: var(--link-color);">Book a Call &rarr;</a></div>
+                            style="font-weight: 700; font-size: 1.35rem; color: var(--link-color);">Book a Call
+                            &rarr;</a></div>
                     <div style="opacity: 0.6;"><a href="mailto:me@maxcomperatore.com">Email</a></div>
                     <div style="opacity: 0.6;"><a href="https://www.linkedin.com/in/maxcomperatore"
                             target="_blank">LinkedIn</a></div>
@@ -740,11 +761,13 @@
                 <div class="heart-block">
                     <p>
                         Finally, money that works like the internet. No more Stripe holding your funds hostage. No
-                        rolling reserves, borders, logins, or chargeback fraud. And absolutely no waiting 3-10 "business days"
+                        rolling reserves, borders, logins, thresholds or chargeback fraud. And absolutely no
+                        waiting 3-10 "business days"
                         for your own cash.
                     </p>
                     <p>
-                        Drop this paywall in front of any digital route. It seamlessly handles one-time content sales, invoices, donations, and recurring SaaS subscriptions.
+                        Drop this paywall in front of any digital route. It seamlessly handles one-time content sales,
+                        invoices, donations, and recurring SaaS subscriptions.
                     </p>
 
                     <div class="paywall-container">
@@ -754,7 +777,8 @@
                                 <span
                                     style="background: rgba(0,0,0,0.05); color: #666; font-size: 0.55em; padding: 3px 8px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700;">Demo</span>
                             </h3>
-                            <p class="pw-desc">Unlock access to <strong>[ Contact Form / Membership / Anything ]</strong>. To
+                            <p class="pw-desc">Unlock access to <strong>[ Contact Form / Membership / Anything
+                                    ]</strong>. To
                                 proceed, please pay $5.00 Base USDC.</p>
 
                             <div class="paywall-pill">
@@ -819,7 +843,9 @@
 
                     <p>
                         Built fiercely for <strong>creators</strong> who deserve 100% of their leverage.
-                        Better yet, the protocol is machine-readable, meaning <span class="tooltip" data-tooltip="AI agents could be worth $236 billion by 2034. — World Economic Forum">AI agents can also pay you</span> directly in USDC.
+                        Better yet, the protocol is machine-readable, meaning <span class="tooltip"
+                            data-tooltip="AI agents could be worth $236 billion by 2034. — World Economic Forum">AI
+                            agents can also pay you</span> directly in USDC.
                     </p>
                 </div>
             </section>
